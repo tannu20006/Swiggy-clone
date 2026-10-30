@@ -1,0 +1,248 @@
+.html 
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swiggy - Food Delivery</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Swiggy_logo.png" alt="Swiggy Logo">
+        <span>Swiggy</span>
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#restaurants">Restaurants</a>
+        <a href="#categories">Food</a>
+        <a href="#" class="cart">
+            Cart (<span id="cartCount">0</span>)
+        </a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>Hungry? Order Your Favourite Food!</h1>
+    <p>Discover the best food and restaurants near you.</p>
+
+    <div class="search-box">
+        <input type="text" id="searchInput"
+        placeholder="Search for restaurants or food...">
+        <button onclick="searchFood()">Search</button>
+    </div>
+</section>
+
+<!-- FOOD CATEGORIES -->
+<section class="food-section" id="categories">
+
+    <h2>What's on your mind? 😋</h2>
+
+    <div class="food-scroll">
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500" alt="Burger">
+            <p>Burger</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500" alt="Pizza">
+            <p>Pizza</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=500" alt="Biryani">
+            <p>Biryani</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500" alt="Snacks">
+            <p>Snacks</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=500" alt="Noodles">
+            <p>Noodles</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500" alt="Pasta">
+            <p>Pasta</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500" alt="Ice Cream">
+            <p>Ice Cream</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Cake">
+            <p>Cakes</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=500" alt="Momos">
+            <p>Momos</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=500" alt="Dosa">
+            <p>Dosa</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=500" alt="Sandwich">
+            <p>Sandwich</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500" alt="Chinese">
+            <p>Chinese</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500" alt="Dessert">
+            <p>Desserts</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=500" alt="Salad">
+            <p>Salad</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500" alt="Waffles">
+            <p>Waffles</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=500" alt="Wraps">
+            <p>Wraps</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=500" alt="French Fries">
+            <p>French Fries</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500" alt="Milkshake">
+            <p>Milkshake</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=500" alt="Hot Dog">
+            <p>Hot Dog</p>
+        </div>
+
+        <div class="food-item">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500" alt="Cheese Burger">
+            <p>Cheese Burger</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- RESTAURANTS -->
+<section class="container" id="restaurants">
+
+    <h2>Popular Restaurants Near You</h2>
+
+    <div class="restaurants">
+
+        <div class="card" data-name="burger king burger">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600" alt="Burger">
+            <div class="card-content">
+                <h3>Burger King</h3>
+                <p class="rating">★ 4.3 | 25-30 mins</p>
+                <p class="price">Burger • ₹199</p>
+                <button onclick="addToCart('Burger King')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card" data-name="pizza hut pizza">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600" alt="Pizza">
+            <div class="card-content">
+                <h3>Pizza Hut</h3>
+                <p class="rating">★ 4.5 | 30-35 mins</p>
+                <p class="price">Pizza • ₹299</p>
+                <button onclick="addToCart('Pizza Hut')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card" data-name="chinese wok noodles">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600" alt="Noodles">
+            <div class="card-content">
+                <h3>Chinese Wok</h3>
+                <p class="rating">★ 4.2 | 20-25 mins</p>
+                <p class="price">Noodles • ₹179</p>
+                <button onclick="addToCart('Chinese Wok')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card" data-name="cake dessert bakery">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600" alt="Cake">
+            <div class="card-content">
+                <h3>Sweet Bakery</h3>
+                <p class="rating">★ 4.6 | 25-30 mins</p>
+                <p class="price">Cake • ₹249</p>
+                <button onclick="addToCart('Sweet Bakery')">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h2>Swiggy</h2>
+    <p>© 2026 Food Delivery Website | Made with ❤️</p>
+    <p>Good Food, Great Mood!</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+let cartCount = 0;
+
+function addToCart(item) {
+    cartCount++;
+
+    document.getElementById("cartCount").innerText = cartCount;
+
+    alert(item + " added to your cart!");
+}
+
+function searchFood() {
+    let input = document.getElementById("searchInput")
+        .value.toLowerCase();
+
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let name = card.dataset.name;
+
+        if (name.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
